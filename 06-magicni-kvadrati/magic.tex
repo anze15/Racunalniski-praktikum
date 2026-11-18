@@ -65,12 +65,12 @@ Prirejeno po:
    če seštejemo vsa števila poljubne vrstice, vsa števila poljubnega
    stolpca ali vsa števila v katerikoli od glavnih diagonal.
  \end{definicija}
-\label{table:mag3}
 Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}
 
 
 \begin{table}[htp]
     \caption{Magični kvadrat reda 3}
+    \label{table:mag3}
     \centering
    % - oznaka: table:mag3
    % Začetek magičnega kvadrata
@@ -86,6 +86,7 @@ Primer magičnega kvadrata reda 3 je prikazan v tabeli \ref{table:mag3}
  \begin{definicija}
    Magični kvadrat reda \(n\) je \emph{normalen}, če v njem nastopajo števila
    \begin{equation}
+      \label{eq:numbers}
       % oznaka: eq:numbers
       1, 2, 3, \ldots, n^2-1, n^2.
    \end{equation}
@@ -112,7 +113,7 @@ kitajskega sončnega leta. Ta vzorec so na določen način uporabljali upravljal
 reke.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\label{euler}{3}
+
 \subsection{Kulturna pomembnost}
 
 Magični kvadrati so fascinirali človeštvo skozi vso zgodovino. Najdemo jih
@@ -125,7 +126,7 @@ obliki magičnega kvadrata reda 3. Ta je v bistvu enak kot kvadrat
 Lo Shu, vendar je vsako število povečano za 19.
 
 Z magičnimi kvadrati so se ukvarjali tudi najbolj znani matematiki kot na
-primer Euler, glej [3]. % ključ: euler
+primer Euler, glej \cite{euler}. % ključ: euler
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -183,22 +184,21 @@ in zato kvadrat ni normalen.
 % Začetek dokaza
 
 \begin{proof}
-      \label{eq:numbers}
       V normalnem magičnem kvadratu reda \(n\) je vsota vseh nastopajočih
-      števil (glej (1) na strani (2)) enaka \[1 + 2 + 3 +\cdots + n^2 = \sum_{k=1}^{n^2} k = \frac{1}{2}n^2(n^2 +1)\]. Ker imamo
+      števil (glej (\ref{eq:numbers}) na strani \ref{eq:mc}) enaka \[1 + 2 + 3 +\cdots + n^2 = \sum_{k=1}^{n^2} k = \frac{1}{2}n^2(n^2 +1)\]. Ker imamo
       v kvadratu \(n\) vrstic z enako vsoto, je vsota števil v eni vrstici
       enaka številu \(M_2(n)\).
 \end{proof} % sklica: eq:numbers, eq:numbers
 % Konec dokaza
 
-Preprost račun pokaže, da je konstanti ?? analogna konstanta
+Preprost račun pokaže, da je konstanti \ref{eq:numbers} analogna konstanta
 \(M_2(n;A,D)\) za magični kvadrat, v katerem so nameščena števila
 \(A\), \(A+D\), \(A+2D\), \ldots, \(A+(n^2-1)D\), enaka % sklic: eq:mc
 !!
 
  \begin{definicija}
       Če vsako od števil v normalnem magičnem kvadratu reda \(n\) odštejemo
-      od števila !!, dobimo nov magični kvadrat, ki je prvotnemu
+      od števila \(n^2 + 1\), dobimo nov magični kvadrat, ki je prvotnemu
       \emph{komplementaren}.
  \end{definicija}
 
@@ -206,16 +206,15 @@ Preprost račun pokaže, da je konstanti ?? analogna konstanta
       Pravimo, da sta dva magična kvadrata \emph{različna}, če enega ni mogoče dobiti
       iz drugega s pomočjo zasukov oziroma zrcaljenj.
  \end{definicija}
-
-Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli ??.
+Števila različnih normalnih magičnih kvadratov se nahajajo v tabeli \ref{stevila}.
 % sklic: table:stevila
-\label{table: mag3}
 % - napis nad tabelo: Število različnih normalnih magičnih kvadratov
 % - oznaka: table:stevila
 % Začetek tabele
 
 \begin{table}[htp]
       \caption{Število različnih normalnih magičnih kvadratov}
+      \label{stevila}
       \centering
 
       \begin{tabular}{lcccccc}
@@ -228,11 +227,11 @@ Preprost račun pokaže, da je konstanti ?? analogna konstanta
 % Konec tabele
 
 Vse normalne magične kvadrate reda 4 je oštevilčil Frénicle de Bessy
-leta 1693, glej [2], in jih je moč najti v knjigi [1]
+leta 1693, glej \cite{bessy}, in jih je moč najti v knjigi \cite{berlekamp}
 iz leta 1982. Število normalnih kvadratov reda 5 je izračunal
-R. Schroeppel leta 1973 (glej Gardner [4]).
+R. Schroeppel leta 1973 (glej Gardner \cite{gardner}).
 Natančno število vseh različnih normalnih magičnih kvadratov reda 6 ni znano.
-Avtorja navedenega približka sta Pinn in Wieczerkowski (glej [5]), ki
+Avtorja navedenega približka sta Pinn in Wieczerkowski (glej \cite{pinn}), ki
 sta za oceno uporabila simulacijo Monte Carlo in metode statistične mehanike.
  % ključi: bessy, berlekamp, gardner, pinn
 
@@ -241,7 +240,8 @@ sta za oceno uporabila simulacijo Monte Carlo in metode statistične mehanike.
 \newpage
 
 % Tu vstavite bibliografijo
-
+\bibliographystyle{siam}
+\bibliography{magic}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
